@@ -5,19 +5,7 @@
 </head>
 <body>
 <?php
-// Informations d'identification
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'boite_idee');
- 
-// Connexion à la base de données MySQL 
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
- 
-// Vérifier la connexion
-if($conn === false){
-    die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
-}
+ require_once "../configuration/connection.php";
 if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
   $username = stripslashes($_REQUEST['username']);
@@ -44,7 +32,6 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
 <div class="container">
 <form class="box" action="" method="post">
 <h1 class="box-logo box-title">Inscription</h1>
-    <h1 class="box-title">S'inscrire</h1>
   <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur" required /><br/>
     <input type="text" class="box-input" name="email" placeholder="Email" required /><br/>
     <input type="password" class="box-input" name="password" placeholder="Mot de passe" required /><br/>
