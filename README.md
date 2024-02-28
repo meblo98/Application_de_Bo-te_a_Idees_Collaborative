@@ -1,6 +1,4 @@
-Bien sûr ! Voici un exemple de fichier README pour votre application de boîte à idées collaborative :
 
-```markdown
 # Boîte à Idées Collaborative
 
 Bienvenue dans l'application de boîte à idées collaborative ! Cette application permet à plusieurs utilisateurs de partager et de contribuer à des idées de manière collaborative.
