@@ -56,6 +56,3 @@ Les contributions sont les bienvenues ! Si vous souhaitez contribuer à l'améli
 
 Ce projet est sous licence [MIT](LICENSE).
 
-```
-
-N'oubliez pas d'ajuster les informations spécifiques à votre projet, telles que les URL de clonage du dépôt, les noms de fichiers, etc.
