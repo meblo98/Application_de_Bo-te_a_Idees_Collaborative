@@ -10,17 +10,15 @@ ini_set('display_errors', 1);
  require_once "configuration/connection.php";
  session_start();
 if (isset($_REQUEST['tache'], $_REQUEST['debut'], $_REQUEST['fin'],$_REQUEST['description'],$_REQUEST['status'])){
-  // récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
+  // récupérer les données saissis et supprimer les antislashes ajoutés par le formulaire
   $tache = stripslashes($_REQUEST['tache']);
   $tache = mysqli_real_escape_string($conn, $tache); 
-  // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
   $debut = stripslashes($_REQUEST['debut']);
   $debut = mysqli_real_escape_string($conn, $debut);
   $fin = stripslashes($_REQUEST['fin']);
   $fin = mysqli_real_escape_string($conn, $fin);
   $status = stripslashes($_REQUEST['status']);
   $status = mysqli_real_escape_string($conn, $status);
-  // récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
   $description = stripslashes($_REQUEST['description']);
   $description = mysqli_real_escape_string($conn, $description);
   $username = $_SESSION['username'];

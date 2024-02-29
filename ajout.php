@@ -8,13 +8,10 @@
  require_once "configuration/connection.php";
  session_start();
 if (isset($_REQUEST['titre'], $_REQUEST['categorie'], $_REQUEST['description'])){
-  // récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
+  // récupérer les données saissi par l'utilisateur et supprimer les antislashes ajoutés par le formulaire
   $titre = stripslashes($_REQUEST['titre']);
   $titre = mysqli_real_escape_string($conn, $titre); 
-  // récupérer l'email et supprimer les antislashes ajoutés par le formulaire
   $categorie = stripslashes($_REQUEST['categorie']);
-  //$categorie = mysqli_real_escape_string($conn, $categorie);
-  // récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
   $description = stripslashes($_REQUEST['description']);
   $description = mysqli_real_escape_string($conn, $description);
   $username = $_SESSION['username'];
@@ -55,9 +52,7 @@ if (isset($_REQUEST['titre'], $_REQUEST['categorie'], $_REQUEST['description']))
           $conn->close();
       ?>
       </select><br><br>
-      <!-- <input type="text" class="box-input" name="categorie" placeholder="Categorie" required /><br/> -->
       <textarea name="description" id="" class="box-textarea" placeholder="description" required cols="42" rows="10"></textarea>
-      <!-- <input type="text" class="box-input" name="description" placeholder="description" required /><br/> -->
       <input type="submit" name="submit" value="Ajouter" class="box-button" />
       <p class="box-register"><a href="index.php">Retourner</a></p>
   </form>

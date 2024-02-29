@@ -5,46 +5,15 @@ ini_set('display_errors', 1);
 // Include config file
 require_once "configuration/connection.php";
  
-// Define variables and initialize with empty values
-// $name = $address = $salary = "";
-// $name_err = $address_err = $salary_err = "";
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Get hidden input value
     $id = $_POST["id"];
-    
-    // // Validate name
     $titre = trim($_POST["titre"]);
-    // if(empty($input_name)){
-    //     $name_err = "Please enter a name.";
-    // } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-    //     $name_err = "Please enter a valid name.";
-    // } else{
-    //     $name = $input_name;
-    // }
-    
-    // // Validate address address
     $categorie = trim($_POST["categorie"]);
-    // if(empty($input_address)){
-    //     $address_err = "Please enter an address.";     
-    // } else{
-    //     $address = $input_address;
-    // }
-    
-    // // Validate salary
     $description = trim($_POST["description"]);
-    // if(empty($input_salary)){
-    //     $salary_err = "Please enter the salary amount.";     
-    // } elseif(!ctype_digit($input_salary)){
-    //     $salary_err = "Please enter a positive integer value.";
-    // } else{
-    //     $salary = $input_salary;
-    // }
-    
-    // Check input errors before inserting in database
-    // if(empty($name_err) && empty($address_err) && empty($salary_err)){
-        // Prepare an update statement
+
         $sql = "UPDATE ideas SET title=?, category=?, description=? WHERE id=?";
          
         if($stmt = mysqli_prepare($conn, $sql)){
@@ -71,7 +40,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
          
         // Close statement
         mysqli_stmt_close($stmt);
-    // }
     
     // Close connection
     mysqli_close($link);
