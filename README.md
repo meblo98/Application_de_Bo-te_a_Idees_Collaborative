@@ -39,12 +39,11 @@ Bienvenue dans l'application de boîte à idées collaborative ! Cette applicati
 ## Structure du Projet
 
 - `index.php`: Page d'accueil de l'application.
-- `ideas.php`: Page pour afficher les idées et leurs commentaires.
-- `add_idea.php`: Page pour ajouter une nouvelle idée.
-- `edit_idea.php`: Page pour éditer une idée existante.
-- `delete_idea.php`: Page pour supprimer une idée.
+- `ajout.php`: Page pour ajouter une nouvelle idée.
+- `update.php`: Page pour éditer une idée existante.
+- `delete.php`: Page pour supprimer une idée.
 - `config.php`: Fichier de configuration pour la connexion à la base de données.
-- `assets/`: Répertoire contenant les fichiers CSS, JavaScript, etc.
+- `auth/`: Répertoire contenant les fichiers login.php, logout.php et register.php.
 
 ## Contribution
 
