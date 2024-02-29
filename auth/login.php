@@ -5,19 +5,7 @@
 </head>
 <body>
 <?php
-// Informations d'identification
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'boite_idee');
- 
-// Connexion à la base de données MySQL 
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
- 
-// Vérifier la connexion
-if($conn === false){
-    die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
-}
+require_once "../configuration/connection.php";
 session_start();
 
 if (isset($_POST['username'])){
@@ -30,6 +18,7 @@ if (isset($_POST['username'])){
   $rows = mysqli_num_rows($result);
   if($rows==1){
       $_SESSION['username'] = $username;
+      $_SESSION ['id'] = $id;
       header("Location: ../index.php");
   }else{
     $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
