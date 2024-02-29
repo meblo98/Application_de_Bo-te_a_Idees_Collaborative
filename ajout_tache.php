@@ -37,8 +37,8 @@ if (isset($_REQUEST['tache'], $_REQUEST['debut'], $_REQUEST['fin'],$_REQUEST['de
 ?>
 <div class="container">
 <form class="box" action="" method="post">
-<h1 class="box-logo box-title">Ajouter une tache</h1>
-  <input type="text" class="box-input" name="tache" placeholder="nom de la tache" required /><br/>
+<h1 class="box-logo box-title">Ajouter une categorie</h1>
+  <input type="text" class="box-input" name="tache" placeholder="nom de la categorie" required /><br/>
   <label for="">Debut</label>
     <input type="date" class="box-input" name="debut" placeholder="date debut" required /><br/>
     <label for="">Fin</label>

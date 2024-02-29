@@ -21,8 +21,8 @@
         <a class="nav-link text-white" href="ajout_tache.php">ajoutés une tache</a>
       </li>
 
-      <li class="nav-item">
-        Dalal jam <?php echo $_SESSION['username']; 
+      <li class="nav-item text-white">
+        Dalal jam <br> <?php echo $_SESSION['username']; 
         echo $_SESSION['id']; 
         ?>
       </li>

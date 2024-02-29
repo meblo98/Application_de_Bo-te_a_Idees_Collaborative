@@ -108,7 +108,8 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
       <h1 class="box-logo box-title">Modifier l'idées</h1>
       <input type="text" class="box-input" value="<?php echo $titre; ?>" name="titre" placeholder="Titre" required /><br/>
       <input type="text" class="box-input" value="<?php echo $categorie; ?>" name="categorie" placeholder="Categorie" required /><br/>
-      <input type="text" class="box-input" value="<?php echo $description; ?>" name="description" placeholder="description" required /><br/>
+      <textarea name="description" id="" class="box-textarea" value="<?php echo $description; ?>" placeholder="description" required cols="42" rows="10"></textarea>
+      <!-- <input type="text" class="box-input"  name="description" placeholder="description" required /><br/> -->
       <input type="submit" name="submit" value="Modifier" class="box-button" />
       <p class="box-register"><a href="index.php">Retourner</a></p>
     </form>

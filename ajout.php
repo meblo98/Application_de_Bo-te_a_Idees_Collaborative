@@ -32,7 +32,7 @@ if (isset($_REQUEST['titre'], $_REQUEST['categorie'], $_REQUEST['description']))
   <form class="box" action="" method="post">
     <h1 class="box-logo box-title">Ajout d'idées</h1>
     <input type="text" class="box-input" name="titre" placeholder="Titre" required /><br/>
-    <label for="">Titre de la tache</label>
+    <label for="">Titre de la categorie</label>
     <select name="categorie" id="categorie">
       <?php
                               // Connexion à la base de données
