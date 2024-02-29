@@ -51,6 +51,7 @@ if (isset($_REQUEST['tache'], $_REQUEST['debut'], $_REQUEST['fin'],$_REQUEST['de
     <p class="box-register"><a href="index.php">Retourner</a></p>
 </form>
 </div>
+
 <?php } ?>
 </body>
 </html>
